@@ -1,0 +1,24 @@
+{
+  "dev-spec-graph-gate": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "grep_search|find_by_name|read_file|view_file|view_file_outline|view_code_item|run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv run --no-project python scripts/hook_gate.py --event pre-tool-use",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "uv run --no-project python scripts/hook_gate.py --event stop",
+        "timeout": 10
+      }
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+interface:
+  display_name: "开发规范"
+  short_description: "环境锁定、契约驱动、双图谱与Hook硬门禁及全栈开发规范"
